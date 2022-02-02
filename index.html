@@ -1,0 +1,84 @@
+<html>
+<head>
+		<meta name="viewport" content="width-device-width, initial-scale-1.0">
+		<title> 3D Product Card Design</title>
+		<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="prodcut">
+		
+			<img src="img-1.jpg" id="frontImg">
+			<img src="img-2.jpg" id="backImg">
+		
+		
+			<div class="product-inner" id="productBox">
+				<div class="prodcut-front">
+						<div class="product-top">
+								<h1>Iphone 5s</h1>
+						</div>
+						<div class="product-bottom">
+							<p>Iphone 5s: Old is Gold</p>
+							<h2>2GB RAM,256GB ROM</h2>
+							<h1>4,999<span>₨</span></h1>
+							<button type="button">Add to Cart</button>
+								<div class="color-select">
+									<div class="select-item">
+										<img src="img-1.jpg">
+									</div>
+									<div class="select-item">
+										<img src="img-2.jpg" onclick="flipRight()">
+									</div>
+								
+								</div>
+						</div>
+				</div>
+				<div class="prodcut-back">
+						<div class="product-top product-top2">
+								<h1>Iphone 13pro</h1>
+						</div>
+						<div class="product-bottom">
+							<p>Iphone 5s: Old is Gold</p>
+							<h2>2GB RAM,256GB ROM</h2>
+							<h1>4,999<span>₨</span></h1>
+							<button type="button">Add to Cart</button>
+								<div class="color-select">
+									<div class="select-item">
+										<img src="img-1.jpg" onclick="flipLeft()">
+									</div>
+									<div class="select-item">
+										<img src="img-2.jpg">
+									</div>
+								
+								</div>
+						</div>
+				</div>
+				<div class="left-side"></div>
+				<div class="right-side"></div>
+		</div>
+	</div>
+</div>
+	<script>
+		var productBox = document.getElementById("productBox");
+		var frontImg = document.getElementById("frontImg");
+		var backImg = document.getElementById("backImg");
+		
+		function flipRight(){
+			productBox.style.transform = "rotateY(180deg)";
+			frontImg.style.left = "650px";
+			backImg.style.left = "20px";
+			frontImg.style.transform = "rotate(-30deg)";
+			backImg.style.transform = "rotate(0deg)";
+		}
+		function flipLeft(){
+			productBox.style.transform = "rotateY(0deg)";
+			frontImg.style.left = "20px";
+			backImg.style.left = "-650px";
+			frontImg.style.transform = "rotate(0deg)";
+			backImg.style.transform = "rotate(-30deg)";
+		
+		}
+	
+	</script>
+</body>
+</html>
